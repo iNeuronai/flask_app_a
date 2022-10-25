@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "cstrap.flask-snippets",
+    "wholroyd.jinja",
+    "formulahendry.code-runner",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "VisualStudioExptTeam.intellicode-api-usage-examples"
+  ]
+}
