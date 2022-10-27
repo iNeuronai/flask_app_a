@@ -4,17 +4,7 @@
 	  {
 		"label": "Installing dependencies",
 		"type": "shell",
-		"command": "pip install -r requirements.txt",
-		"presentation": {
-		  "reveal": "always",
-		  "panel": "new"
-		},
-		"runOptions": { "runOn": "folderOpen" }
-	  },
-      {
-		"label": "Running app...",
-		"type": "shell",
-		"command": "python app.py",
+		"command": "pip install -r requirements.txt && python app.py",
 		"presentation": {
 		  "reveal": "always",
 		  "panel": "new"
