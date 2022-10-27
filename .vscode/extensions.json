@@ -1,10 +1,10 @@
 {
   "recommendations": [
     "ms-python.python",
-    "cstrap.flask-snippets",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter-renderers",
     "wholroyd.jinja",
-    "formulahendry.code-runner",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "VisualStudioExptTeam.intellicode-api-usage-examples"
+    "formulahendry.code-runner"
   ]
 }
