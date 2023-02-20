@@ -1,5 +1,5 @@
 from flask import Flask,request ,render_template , jsonify
-
+import math
 app = Flask(__name__)
 
 
@@ -16,16 +16,19 @@ def math_ops():
         num2 = int(request.form['num2'])
         if ops == 'add':
             r = num1+num2
-            result = "The sum of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The sum of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
         if ops == 'subtract':
             r = num1-num2
-            result = "The subtract of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The subtract of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
         if ops == 'multiply':
             r = num1*num2
-            result = "The multiply of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The multiply of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
         if ops == 'divide':
             r = num1/num2
-            result = "The divide of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The divide of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
+        if ops == 'log':
+            r = math.log(num1, num2)
+            result = "The divide of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
             
         return render_template('results.html' , result = result)
 
@@ -40,16 +43,19 @@ def math_ops1():
         num2 = int(request.json['num2'])
         if ops == 'add':
             r = num1+num2
-            result = "The sum of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The sum of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
         if ops == 'subtract':
             r = num1-num2
-            result = "The subtract of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The subtract of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
         if ops == 'multiply':
             r = num1*num2
-            result = "The multiply of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The multiply of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
         if ops == 'divide':
             r = num1/num2
-            result = "The divide of " + str(num1) + 'and ' + str(num2) + "is " + str(r)
+            result = "The divide of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
+        if ops == 'log':
+            r = math.log(num1, num2)
+            result = "The divide of " + str(num1) + ' and ' + str(num2) + " is " + str(r)
             
         return jsonify(result)
 
